@@ -2,3 +2,25 @@
 
 npm install -g truffle
 truffle init
+
+
+//after code  paste
+truffle compile
+
+truffle migrate --network development
+
+truffle console --network development
+
+let shop = await Shopping.deployed()
+
+await shop.productCount()
+
+await shop.getProduct(1)
+
+let accounts = await web3.eth.getAccounts()
+await shop.buyProduct(1, {
+    from: accounts[0],
+    value: web3.utils.toWei("50000", "wei")
+})
+
+await shop.getProduct(2)
