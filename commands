@@ -1,0 +1,4 @@
+//before code paste
+
+npm install -g truffle
+truffle init
